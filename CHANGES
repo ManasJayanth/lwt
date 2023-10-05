@@ -68,6 +68,18 @@
   * Lwt_result.bind_error. (#943, Boning Dong)
   * Add ?cloexec parameter to Lwt_io.pipe. (#911, Antonin Décimo)
 
+====== Misc ======
+
+  * On Windows, make Lwt_process.create_process duplicate standard handles given to the child process if they're not inheritable, to mimic the behaviour of Unix.create_process. (#909, Antonin Décimo)
+  * Add missing dependency to `cppo` in lwt-react's opam file. (#946, Rizo I)
+  * Improve documentation (especially internal links). (#928, Antonin Décimo)
+  * Fix documentation of infix choose. (#952, Reynir Björnsson)
+  * Only define OCAML_NAME_SPACE for OCaml<5.0.0. (#929, Antonin Décimo)
+  * Replace mentions of Pervasives with Stdlib in the doc. (#954, Antonin Décimo)
+  * Improve deprecation message for auto_yield. (#908, Seb Mondet)
+  * Fix mirage tutorial link. (#936, Tuomas Lukka)
+  * Fix issues in opam file. (#937, Andreas Hauptmann)
+
 ====== Fixes ======
 
   * Fix win32_spawn leaking dev_null fd in the parent process. (#906, Antonin Décimo)
